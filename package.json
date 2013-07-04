@@ -1,0 +1,19 @@
+{
+  "name": "monsterscraper",
+  "version": "0.0.0",
+  "description": "A tool to help scrape lists of legendary creatures from Wikipedia.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "request": "~2.21.0",
+    "cheerio": "~0.12.0",
+    "async": "~0.2.9",
+    "hoek": "~0.9.1",
+    "hapi": "~1.8.2"
+  }
+}
