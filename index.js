@@ -29,24 +29,11 @@ request(baseURL, function(err, response, body) {
 			//console.log(listing[i].attribs.href);
 			singleAlphabetURLs.push(wikibaseURL + listing[i].attribs.href);
 		}
-		
-		//for (var i = 0; i < singleAlphabetURLs.length; i++) {
-			//parseSingleAlphabetPage(singleAlphabetURLs[i], function(alphabetPageListing) {
-				//console.log(alphabetPageListing);
-				
-			//	for (var j = 0; j < alphabetPageListing.length ;j++) {
-			//		//console.log(alphabetPageListing[j]);
-			//		masterList.push(alphabetPageListing[j]);
-			//	}
-				
-			//});
-		//}
+
 		async.each(singleAlphabetURLs, parseSingleAlphabetPage, function(err) {
 			//its all done
 			masterList = Hoek.unique(masterList);
-			
-			//console.log(masterList);
-			//TODO output
+
 			server.start();
 			console.log('Server up at ' + server.info.uri + ' !');
 		})
