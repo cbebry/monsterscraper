@@ -4,7 +4,7 @@ var request = require('request'),
 	Hoek = require('hoek'),
 	Hapi = require('hapi');
 	
-var server = Hapi.createServer('0.0.0.0', 5497);
+var server = Hapi.createServer('amalgamancer.spectrumbranch.com', 8777, { cors: true });
 
 server.route({
 	method: 'GET',
