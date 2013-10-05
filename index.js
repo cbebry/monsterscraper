@@ -58,10 +58,6 @@ var parseSingleAlphabetPage = function(URL, callback) {
 			var listing = $('#mw-content-text ul li');
 			var allLinks = [];
 			
-			
-			for (var i = 0; i < listing.length; i++) {
-				
-			}
 			async.each(listing, function(input, zcallback) {
 				if (input.children[0].attribs) {
 					allLinks.push(wikibaseURL+input.children[0].attribs.href);
